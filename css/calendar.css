@@ -1,0 +1,79 @@
+.calendar-date-text{
+  font-family: DancingScript-b;
+  line-height: 0em;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.calendar-text{
+  font-family: 'Noto Sans KR', sans-serif;
+  line-height: 1em;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.calendar-container {
+  background: #fff;
+  padding-bottom: clamp(1rem, 4vw, 2rem);
+}
+
+.calendar-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: clamp(1rem, 4vw, 1.5rem);
+  table-layout: fixed;
+}
+
+.calendar-table th,
+.calendar-table td {
+  text-align: center;
+  padding: clamp(0.5rem, 1.5vw, 0.7rem) 0;
+  font-size: clamp(0.95rem, 2vw, 1.05rem);
+  color: #444;
+}
+
+.calendar-table th {
+  font-weight: 600;
+  color: #888;
+}
+
+.calendar-table th:first-child,
+.calendar-table td:first-child {
+  color: #e74c3c;
+}
+
+.calendar-table td {
+  cursor: default;
+  transition: background 0.2s, color 0.2s;
+}
+
+.calendar-table td.selected {
+  background: #bc6c1c;
+  color: #fff;
+  font-weight: bold;
+  position: relative;
+  border-radius: 9999px;
+}
+
+.d-day-message {
+  text-align: center;
+  font-size: clamp(1rem, 2.3vw, 1.15rem);
+  margin-top: clamp(0.7rem, 2vw, 1rem);
+  margin-bottom: clamp(0.5rem, 1.5vw, 0.8rem);
+  color: #bc6c1c;
+  font-weight: bold;
+  min-height: 1.5em;
+}
+
+@media (max-width: 600px) {
+  .calendar-container {
+    padding: clamp(0.7rem, 4vw, 1rem);
+    max-width: 98vw;
+  }
+
+  .calendar-table th,
+  .calendar-table td {
+    font-size: clamp(0.85rem, 3vw, 0.95rem);
+    padding: clamp(0.4rem, 1vw, 0.6rem) 0;
+  }
+}

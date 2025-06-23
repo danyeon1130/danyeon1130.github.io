@@ -1,0 +1,114 @@
+.swiper {
+  width: 100%;
+  max-width: 20rem; /* 기존 640px */
+  margin: 0 auto;
+}
+
+.main-swiper {
+  max-width: 35rem; /* 기존 640px */
+  margin: 0 auto;
+}
+
+.main-swiper-slide {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.2rem; /* 10px */
+  padding: 0.2rem;
+  box-sizing: border-box;
+}
+
+.main-swiper-slide img {
+  max-width: 35rem; /* 기존 640px */
+  max-height: 35rem; /* 기존 640px */
+  aspect-ratio: 1/1;  /* 정사각형 비율 유지 */
+  transition: transform 0.2s ease-in-out;
+  object-fit: cover;  /* 핵심! 이미지가 꽉 차게 잘림 */
+  /* object-fit: contain;  /* 핵심! 이미지가 꽉 차게 잘림 */
+}
+
+/* 모달 Swiper: 최대한 크게! */
+.modal-swiper {
+  max-width: 55rem; /* 기존 640px */
+  margin: 0 auto;
+}
+
+.swiper-slide {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.2rem; /* 10px */
+  padding: 0.2rem;
+  box-sizing: border-box;
+}
+
+.swiper-slide img {
+  width: 100%;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+.swiper-pagination {
+  position: relative;
+  margin-top: 1.25rem;
+  text-align: center;
+  z-index: 1;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  inset: 0;
+  background-color: rgba(0, 0, 0);
+}
+
+.modal .swiper {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal .swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal .swiper-slide img {
+  width: auto; /* 또는 width: 100% 로도 시도 */
+  height: auto;
+  object-fit: contain;
+  transition: none !important;
+  transform: none !important;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.modal .swiper-button-next,
+.modal .swiper-button-prev {
+  color: #fff;
+  width: 0.625rem;
+  height: 0.625rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+:root {
+  --swiper-navigation-size: 1.5rem; /* swiper-button 원하는 크기로 지정 */
+}
+
+.modal-close {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.875rem;
+  font-size: 2rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 1.25rem;
+  font-family: sans-serif;
+}

@@ -1,0 +1,180 @@
+.contact-body {
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 2em;
+}
+
+.contact-title {
+  font-weight: bold;
+  font-size: clamp(1.5rem, 2.8vw, 1.8rem);
+  color: #333;
+  margin-bottom: 1rem;
+}
+
+.contact-subtitle {
+  color: #777;
+  font-size: clamp(1rem, 2.3vw, 1.1rem);
+  margin-bottom: 1.5em;
+}
+
+.contact-btn {
+  width: 20rem;
+  padding: 0.5rem;
+  border-radius: 2rem;
+  border: none;
+  margin: 0.5em;
+  font-size: clamp(1.0rem, 2.3vw, 1.3rem);
+  background: linear-gradient(135deg, #f7d9c4, #fce9e3);
+  box-shadow: 0 0.4em 1em rgba(0,0,0,0.1);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.contact-btn:hover {
+  transform: none !important;
+}
+
+.contact-modal {
+  display: none;
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  animation: fadeIn 0.3s;
+}
+
+.contact-modal-content {
+  background-color: #fff;
+  padding: 1rem 4rem;
+  border-radius: 1em;
+  width: 30rem;
+  box-shadow: 0 1em 3em rgba(0,0,0,0.2);
+  text-align: center;
+  animation: slideUp 0.4s;
+}
+
+.contact-account-h3 {
+  display: flex;
+  align-items: center;      /* 세로(수직) 정렬 */
+  justify-content: center;  /* 가로(수평) 정렬 */
+  margin-top: 0.5em;
+  margin-bottom: 2em;
+  font-size: clamp(1.5rem, 2.8vw, 1.8rem);
+  font-weight: bold;
+  color: #000000;
+}
+
+.contact-account-h3-info {
+  text-align: center;
+}
+
+.contact-account-row {
+  display: flex;
+  align-items: center; /* 버튼과 텍스트 수직 중앙 맞춤 */
+  margin: 1.3rem 0;
+  font-size: clamp(1rem, 2.3vw, 1.1rem);
+}
+
+.contact-account-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem; /* 줄 간격 */
+  flex-grow: 1;
+}
+
+.contact-account-top {
+  display: flex;
+  gap: 2rem;
+  font-weight: bold;           /* 윗줄 굵게 */
+  color: #000;                 /* 진한 색 (기본) */
+}
+
+.contact-account-bottom {
+  display: flex;
+  gap: 2rem;
+  font-weight: normal;         /* 아랫줄 보통 */
+  color: #777;                 /* 연한 회색 */
+}
+
+.contact-label {
+  min-width: 3.5rem;
+  text-align: left;            /* 왼쪽 정렬 유지 */
+}
+
+.contact-value {
+  /* 이름이나 번호 텍스트 */
+}
+
+.contact-copy-btn {
+  padding: 0.3em 1em;
+  background-color: #f7d9c4;
+  border: none;
+  border-radius: 0.5em;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.contact-copy-btn:hover {
+  background-color: #fbcbb6;
+}
+
+.contact-close-btn {
+  margin-top: 1rem;
+  padding: 0.5rem 8rem;
+  background-color: #ffd54f;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: clamp(1rem, 2.3vw, 1.1rem);
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.contact-close-btn:hover {
+  background-color: #ffc107;
+}
+
+.phone-contact-line {
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.phone-contact-info {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex: 1;
+}
+.phone-title {
+  font-weight: bold;
+  font-size: clamp(1.5rem, 2.8vw, 1.8rem);
+}
+.phone-name {
+  font-size: clamp(1rem, 2.3vw, 1.1rem);
+}
+.phone-contact-buttons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.phone-contact-buttons button {
+  width: 45px;
+  height: 45px;
+  color: black;
+  background: none;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+svg {
+  width: 1.3em;
+  height: 1.3em;
+}
