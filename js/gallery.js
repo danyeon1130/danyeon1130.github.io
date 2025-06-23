@@ -22,7 +22,7 @@ const modalWrapper = document.getElementById("modalSwiperWrapper");
 // 메인 슬라이더 이미지 페이지 생성
 for (let i = 0; i < imagePaths.length; i += pageSize) {
   const slide = document.createElement("div");
-  slide.className = "swiper-slide";
+  slide.className = "swiper-slide main-swiper-slide";
 
   imagePaths.slice(i, i + pageSize).forEach((src, index) => {
     const img = document.createElement("img");
@@ -49,9 +49,10 @@ imagePaths.forEach((src, i) => {
 });
 
 // 메인 슬라이더 초기화
-const swiper = new Swiper('.swiper:not(.modal-swiper)', {
+const swiper = new Swiper('.main-swiper', {
   loop: false,
   grabCursor: true,
+  direction: 'horizontal', // ← 명시적으로 가로 방향
   pagination: {
     el: '.swiper-pagination',
     clickable: true,
