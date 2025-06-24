@@ -8,7 +8,7 @@ body {
 }
 
 .container {
-  width: 95%;
+  width: 100%;
   max-width: 600px;
   margin: 0 auto;
   background: #fff;
@@ -94,7 +94,7 @@ hr {
 
 @media (max-width: 600px) {
   .container {
-    width: 95%;
+    width: 100%;
     max-width: 100%;
   }
 
