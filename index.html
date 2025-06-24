@@ -14,8 +14,8 @@
   <meta property="og:type" content="website" />
   <meta property="og:title" content="우리의 결혼식에 초대합니다" />
   <meta property="og:description" content="사랑으로 물들어가는 계절, 연인에서 부부라는 이름으로 평생을 함께 하고자 합니다." />
-  <meta property="og:image" content="https://your-domain.com/image.jpg" />
-  <meta property="og:url" content="https://your-domain.com" />
+  <meta property="og:image" content="https://danyeon1130.github.io/img/head.png" />
+  <meta property="og:url" content="https://danyeon1130.github.io" />
 
   <!-- 전화번호 자동링크 방지 -->
   <meta name="format-detection" content="telephone=no" />
@@ -39,6 +39,7 @@
   <link href="css/responsive.css" rel="stylesheet">
   <link href="css/contact.css" rel="stylesheet">
   <link href="css/calendar.css" rel="stylesheet">
+  <link href="css/footer.css" rel="stylesheet">
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
 </head>
@@ -159,27 +160,27 @@
       <div class="directions">
         <div class="section">
           <h3>지하철</h3>
-          <p>언주역 9호선 7번 출구 정면 방향으로<br>150m 도보 후 우측 건물</p>
-          <p>역삼역 2호선 6번 출구 좌측 방향으로<br>450m 도보 후 좌측 건물</p>
+          <p>언주역 9호선 7번 출구 정면 방향으로 150m 도보 후 우측 건물</p>
+          <p>역삼역 2호선 6번 출구 좌측 방향으로 450m 도보 후 좌측 건물</p>
         </div>
 
         <div class="section">
           <h3>버스</h3>
           <p>간선: 147, 463 / 지선: 4211 / 광역: 3600, 9600</p>
-          <p>차병원(역삼방면) 하차 후<br>역삼역 방면 50m 앞 우측 건물</p>
+          <p>차병원(역삼방면) 하차 후 역삼역 방면 50m 앞 우측 건물</p>
         </div>
 
         <div class="section">
           <h3>자가용</h3>
           <p>동호대교 방면<br>
           동호대교 남단에서 3호선 압구정역, 7호선 학동역을 지나<br>
-          차병원 사거리에서 2호선 역삼역 방면으로<br>
-          200m 직진 후 우측 건물</p>
+          차병원 사거리에서 2호선 역삼역 방면으로 200m 직진 후 우측 건물</p>
         </div>
 
         <div class="section">
           <h3>주차</h3>
-          <p>내부 주차 90분 무료<br>내부 주차 만차 시 외부 주차(발렛무료) 150분 무료</p>
+          <p>내부 주차 90분 무료</p>
+          <p>내부 주차 만차 시 외부 주차(발렛무료) 150분 무료</p>
         </div>
       </div>
       <br/>
@@ -206,13 +207,13 @@
               <div class="contact-account-top">
                 <span class="contact-label">신랑</span>
                 <span class="contact-value">이름이</span>
+                <button class="contact-copy-btn" onclick="copyToClipboard('번호1')">복사하기</button>
               </div>
               <div class="contact-account-bottom">
                 <span class="contact-label">하나은행</span>
                 <span class="contact-value">12112545965235</span>
               </div>
             </div>
-            <button class="contact-copy-btn" onclick="copyToClipboard('번호1')">복사하기</button>
           </div>
 
           <div class="contact-account-row">
@@ -220,13 +221,13 @@
               <div class="contact-account-top">
                 <span class="contact-label">아버지</span>
                 <span class="contact-value">이름이</span>
+                <button class="contact-copy-btn" onclick="copyToClipboard('번호1')">복사하기</button>
               </div>
               <div class="contact-account-bottom">
                 <span class="contact-label">하나은행</span>
                 <span class="contact-value">12112545965235</span>
               </div>
             </div>
-            <button class="contact-copy-btn" onclick="copyToClipboard('번호1')">복사하기</button>
           </div>
 
           <div class="contact-account-row">
@@ -234,13 +235,13 @@
               <div class="contact-account-top">
                 <span class="contact-label">어머니</span>
                 <span class="contact-value">이름이</span>
+                <button class="contact-copy-btn" onclick="copyToClipboard('번호1')">복사하기</button>
               </div>
               <div class="contact-account-bottom">
                 <span class="contact-label">하나은행</span>
                 <span class="contact-value">12112545965235</span>
               </div>
             </div>
-            <button class="contact-copy-btn" onclick="copyToClipboard('번호1')">복사하기</button>
           </div>
 
           <button class="contact-close-btn" onclick="closeContactModal('groomModal')">닫기</button>
@@ -259,13 +260,13 @@
               <div class="contact-account-top">
                 <span class="contact-label">신부</span>
                 <span class="contact-value">이름이</span>
+                <button class="contact-copy-btn" onclick="copyToClipboard('번호1')">복사하기</button>
               </div>
               <div class="contact-account-bottom">
                 <span class="contact-label">하나은행</span>
                 <span class="contact-value">12112545965235</span>
               </div>
             </div>
-            <button class="contact-copy-btn" onclick="copyToClipboard('번호1')">복사하기</button>
           </div>
 
           <div class="contact-account-row">
@@ -273,13 +274,13 @@
               <div class="contact-account-top">
                 <span class="contact-label">아버지</span>
                 <span class="contact-value">이름이</span>
+                <button class="contact-copy-btn" onclick="copyToClipboard('번호1')">복사하기</button>
               </div>
               <div class="contact-account-bottom">
                 <span class="contact-label">하나은행</span>
                 <span class="contact-value">12112545965235</span>
               </div>
             </div>
-            <button class="contact-copy-btn" onclick="copyToClipboard('번호1')">복사하기</button>
           </div>
 
           <div class="contact-account-row">
@@ -287,13 +288,13 @@
               <div class="contact-account-top">
                 <span class="contact-label">어머니</span>
                 <span class="contact-value">이름이</span>
+                <button class="contact-copy-btn" onclick="copyToClipboard('번호1')">복사하기</button>
               </div>
               <div class="contact-account-bottom">
                 <span class="contact-label">하나은행</span>
                 <span class="contact-value">12112545965235</span>
               </div>
             </div>
-            <button class="contact-copy-btn" onclick="copyToClipboard('번호1')">복사하기</button>
           </div>
 
           <button class="contact-close-btn" onclick="closeContactModal('brideModal')">닫기</button>
@@ -351,7 +352,7 @@
           <!-- 신랑 -->
           <div class="phone-module-contact-line">
             <div class="phone-contact-info">
-              <div class="phone-title">신랑父</div>
+              <div class="phone-title" style="color: navy">신랑父</div>
               <div class="phone-name">김신랑</div>
             </div>
             <div class="phone-contact-buttons">
@@ -369,7 +370,7 @@
           </div>
           <div class="phone-module-contact-line">
             <div class="phone-contact-info">
-              <div class="phone-title">신랑母</div>
+              <div class="phone-title" style="color: navy">신랑母</div>
               <div class="phone-name">김신랑</div>
             </div>
             <div class="phone-contact-buttons">
@@ -388,7 +389,7 @@
           <!-- 신부 -->
           <div class="phone-module-contact-line">
             <div class="phone-contact-info">
-              <div class="phone-title">신부父</div>
+              <div class="phone-title" style="color: deeppink">신부父</div>
               <div class="phone-name">김신랑</div>
             </div>
             <div class="phone-contact-buttons">
@@ -406,7 +407,7 @@
           </div>
           <div class="phone-module-contact-line">
             <div class="phone-contact-info">
-              <div class="phone-title">신부母</div>
+              <div class="phone-title" style="color: deeppink">신부母</div>
               <div class="phone-name">김신랑</div>
             </div>
             <div class="phone-contact-buttons">
@@ -427,6 +428,26 @@
         </div>
       </div>
     </div>
+
+
+    <footer class="footer">
+      <div class="footer-share">
+        <button id="kakao-share-btn" class="share-button">
+          <img style="margin-right: 0.5rem" src="https://developers.kakao.com/assets/img/about/logos/kakaotalksharing/kakaotalk_sharing_btn_medium.png" alt="카카오톡 공유하기 버튼">
+          <span>카카오톡 공유하기</span>
+        </button>
+        </button>
+      </div>
+      <div class="footer-share">
+        <button id="link-copy-btn" class="share-button">
+          <img style="margin-right: 0.5rem" src="icon/link.png" alt="링크 아이콘">
+          <span>링크주소 복사하기</span>
+        </button>
+      </div>
+      <div class="footer-inner">
+        <p>2025-11-30 Yeonsoo, Danbi</p>
+      </div>
+    </footer>
   </div>
 
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
@@ -436,8 +457,15 @@
   <!-- Swiper JS -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
+  <!-- kakao sdk -->
+  <script src="https://t1.kakaocdn.net/kakao_js_sdk/2.7.5/kakao.min.js" integrity="sha384-dok87au0gKqJdxs7msEdBPNnKSRT+/mhTVzq+qOhcL464zXwvcrpjeWvyj1kCdq6" crossorigin="anonymous"></script>
+
+
   <script src="js/calendar.js"></script>
   <script src="js/gallery.js"></script>
   <script src="js/contact.js"></script>
+  <script src="js/footer.js"></script>
+
+
 </body>
 </html>
