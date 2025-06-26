@@ -39,7 +39,8 @@
   background: linear-gradient(135deg, #f7d9c4, #fce9e3);
   box-shadow: 0 0.4em 1em rgba(0, 0, 0, 0.1);
   cursor: pointer;
-  transition: all 0.3s ease;
+  /* fade-in-on-scroll과 충돌하지 않도록 hover 효과만 별도 transition */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
   color: black;
 }
 

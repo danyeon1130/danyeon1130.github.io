@@ -91,6 +91,29 @@ hr {
   height: auto;
 }
 
+.fade-in-on-scroll {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 1.2s ease, transform 1.2s cubic-bezier(0.5,0,0,1);
+}
+
+.fade-in-on-scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* 연락처/계좌 관련 요소들의 fade-in 속도 조정 */
+.contact-btn.fade-in-on-scroll,
+.phone-contact-line.fade-in-on-scroll {
+  transition: opacity 0.8s ease, transform 0.8s cubic-bezier(0.5,0,0,1);
+}
+
+/* 연락처 제목과 부제목은 좀 더 빠르게 */
+.contact-title.fade-in-on-scroll,
+.contact-subtitle.fade-in-on-scroll {
+  transition: opacity 1.0s ease, transform 1.0s cubic-bezier(0.5,0,0,1);
+}
+
 
 @media (max-width: 600px) {
   .container {

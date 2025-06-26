@@ -54,7 +54,7 @@
       <div class="date">2025년 11월 30일 일요일 오후 3:40</div>
       <div class="venue">더링크호텔 서울 4층 플라자홀</div>
       <hr>
-      <div class="message">
+      <div class="message fade-in-on-scroll">
         사랑으로 물들어가는 계절,<br>
         연인에서 부부라는 이름으로<br>
         평생을 함께 하고자 합니다.<br>
@@ -64,19 +64,20 @@
         더 없는 기쁨으로 간직하겠습니다.
       </div>
       <hr>
-      <div class="parents">
+      <div class="parents fade-in-on-scroll">
         <span>○○○ · ○○○의 아들 신랑이</span>
         <span>○○○ · ○○○의 딸 이신부</span>
       </div>
     </div>
 
-    <div class="mid-image-container">
+    <div class="mid-image-container fade-in-on-scroll">
       <img src="img/middle.png" alt="설명 텍스트">
     </div>
 
     <div class="calendar-container">
-      <p class="calendar-date-text">Date</p>
-      <p class="calendar-text">11월 30일 · 일요일 · 오후 03:40</p>
+      <p class="calendar-date-text fade-in-on-scroll">Date</p>
+      <p class="calendar-text fade-in-on-scroll">11월 30일 · 일요일 · 오후 03:40</p>
+      <div class="calendar-divider-top"></div>
       <table class="calendar-table" id="calendar">
         <thead>
           <tr>
@@ -93,14 +94,15 @@
           <!-- 달력 날짜가 JS로 생성됩니다 -->
         </tbody>
       </table>
-      <div class="d-day-message" id="dDayMessage"></div>
+      <div class="calendar-divider-bottom"></div>
+      <div class="d-day-message fade-in-on-scroll" id="dDayMessage"></div>
     </div>
 
     <!-- Gallery -->
     <div class="gallery">
-      <p class="calendar-date-text">Gallery</p>
+      <p class="calendar-date-text fade-in-on-scroll">Gallery</p>
       <!-- 슬라이더 컨테이너 -->
-      <div class="swiper main-swiper">
+      <div class="swiper main-swiper fade-in-on-scroll">
         <div class="swiper-wrapper" id="swiperWrapper"></div>
         <div class="swiper-pagination"></div> <!-- 페이지 점 표시 -->
       </div>
@@ -123,61 +125,63 @@
     <!-- Map -->
     <div class="map-container">
       <!-- 지도 화면 -->
-      <p class="calendar-date-text">Location</p>
-      <p class="calendar-text">더링크호텔 서울 4층 플라자홀</p>
+      <p class="calendar-date-text fade-in-on-scroll">Location</p>
+      <p class="calendar-text fade-in-on-scroll">더링크호텔 서울 4층 플라자홀</p>
       <br/>
       <script type="text/javascript" src="https://oapi.map.naver.com/openapi/v3/maps.js?ncpKeyId=lcqu5vpbbs"></script>
 
-      <div class="map-module" id="map"></div>
-      <script>
-        var map = new naver.maps.Map('map', {
-          center: new naver.maps.LatLng(37.505551, 126.883847), // 잠실 롯데월드를 중심으로 하는 지도
-          zoom: 16
-        });
+      <div class="map-container-inner fade-in-on-scroll">
+        <div class="map-module" id="map"></div>
+        <script>
+          var map = new naver.maps.Map('map', {
+            center: new naver.maps.LatLng(37.505551, 126.883847), // 잠실 롯데월드를 중심으로 하는 지도
+            zoom: 16
+          });
 
-        var marker = new naver.maps.Marker({
-          position: new naver.maps.LatLng(37.505507, 126.883863),
-          map: map
-        });
-      </script>
-      <!-- 지도 앱 링크 -->
-      <div class="link-container">
-        <a class="map-link" href="https://naver.me/GGCTv6Bk" target="_blank">
-          <img src="icon/naver.png" alt="네이버 지도 아이콘">
-          네이버지도
-        </a>
-        <a class="map-link" href="https://map.kakao.com/link/to/801090941" target="_blank">
-          <img src="icon/kakao.png" alt="카카오 네비 아이콘">
-          카카오맵
-        </a>
-        <a class="map-link" href="https://apis.openapi.sk.com/tmap/app/routes?appKey=M6qRMkRS6W3NRS0uyTyZS4himwLK73v5788hS7Wg&name=더링크호텔서울&lon=126.883847&lat=37.505551" target="_blank">
-          <img src="icon/tmap.png" alt="티맵 아이콘">
-          티맵
-        </a>
+          var marker = new naver.maps.Marker({
+            position: new naver.maps.LatLng(37.505507, 126.883863),
+            map: map
+          });
+        </script>
+        <!-- 지도 앱 링크 -->
+        <div class="link-container">
+          <a class="map-link" href="https://naver.me/GGCTv6Bk" target="_blank">
+            <img src="icon/naver.png" alt="네이버 지도 아이콘">
+            네이버지도
+          </a>
+          <a class="map-link" href="https://map.kakao.com/link/to/801090941" target="_blank">
+            <img src="icon/kakao.png" alt="카카오 네비 아이콘">
+            카카오맵
+          </a>
+          <a class="map-link" href="https://apis.openapi.sk.com/tmap/app/routes?appKey=M6qRMkRS6W3NRS0uyTyZS4himwLK73v5788hS7Wg&name=더링크호텔서울&lon=126.883847&lat=37.505551" target="_blank">
+            <img src="icon/tmap.png" alt="티맵 아이콘">
+            티맵
+          </a>
+        </div>
       </div>
 
       <!-- 길안내 -->
-      <div class="directions">
-        <div class="section">
+      <div class="directions fade-in-on-scroll">
+        <div class="section fade-in-on-scroll">
           <h3>지하철</h3>
           <p>언주역 9호선 7번 출구 정면 방향으로 150m 도보 후 우측 건물</p>
           <p>역삼역 2호선 6번 출구 좌측 방향으로 450m 도보 후 좌측 건물</p>
         </div>
 
-        <div class="section">
+        <div class="section fade-in-on-scroll">
           <h3>버스</h3>
           <p>간선: 147, 463 / 지선: 4211 / 광역: 3600, 9600</p>
           <p>차병원(역삼방면) 하차 후 역삼역 방면 50m 앞 우측 건물</p>
         </div>
 
-        <div class="section">
+        <div class="section fade-in-on-scroll">
           <h3>자가용</h3>
           <p>동호대교 방면<br>
           동호대교 남단에서 3호선 압구정역, 7호선 학동역을 지나<br>
           차병원 사거리에서 2호선 역삼역 방면으로 200m 직진 후 우측 건물</p>
         </div>
 
-        <div class="section">
+        <div class="section fade-in-on-scroll">
           <h3>주차</h3>
           <p>내부 주차 90분 무료</p>
           <p>내부 주차 만차 시 외부 주차(발렛무료) 150분 무료</p>
@@ -189,11 +193,11 @@
 
     <!-- Account -->
     <div class="contact-body">
-      <div class="contact-title">마음 전하실 곳</div>
-      <div class="contact-subtitle">"신랑 & 신부에게 축하의 마음을 전해주세요."</div>
+      <div class="contact-title fade-in-on-scroll">마음 전하실 곳</div>
+      <div class="contact-subtitle fade-in-on-scroll">"신랑 & 신부에게 축하의 마음을 전해주세요."</div>
 
-      <button class="contact-btn" id="groomBtn">신랑측 계좌번호</button>
-      <button class="contact-btn" id="brideBtn">신부측 계좌번호</button>
+      <button class="contact-btn fade-in-on-scroll" id="groomBtn">신랑측 계좌번호</button>
+      <button class="contact-btn fade-in-on-scroll" id="brideBtn">신부측 계좌번호</button>
 
       <!-- 신랑측 모달 -->
       <div class="contact-modal" id="groomModal">
@@ -252,7 +256,7 @@
       <div class="contact-modal" id="brideModal">
         <div class="contact-modal-content">
           <div class="contact-account-h3">
-            <div class="contact-account-h3-info">신랑측 계좌번호</div>
+            <div class="contact-account-h3-info">신부측 계좌번호</div>
           </div>
 
           <div class="contact-account-row">
@@ -307,7 +311,7 @@
 
       <!-- 신랑신부 연락처 라인 -->
       <!-- 신랑연락처 -->
-      <div class="phone-contact-line">
+      <div class="phone-contact-line fade-in-on-scroll">
         <div class="phone-contact-info">
           <div class="phone-title" style="color: navy">신랑</div>
           <div class="phone-name">김신랑</div>
@@ -326,7 +330,7 @@
         </div>
       </div>
       <!-- 신부 연락처 -->
-      <div class="phone-contact-line">
+      <div class="phone-contact-line fade-in-on-scroll">
         <div class="phone-contact-info">
           <div class="phone-title" style="color: deeppink">신부</div>
           <div class="phone-name">김신부</div>
@@ -346,7 +350,7 @@
       </div>
 
       <!-- 혼주 연락처 모달 -->
-      <button class="contact-btn" id="contactBtn">혼주 연락처 보기</button>
+      <button class="contact-btn fade-in-on-scroll" id="contactBtn">혼주 연락처 보기</button>
       <div class="contact-modal" id="contactModal">
         <div class="contact-modal-content">
           <!-- 신랑 -->
@@ -452,7 +456,6 @@
 
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 
   <!-- Swiper JS -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
@@ -464,6 +467,7 @@
   <script src="js/calendar.js"></script>
   <script src="js/gallery.js"></script>
   <script src="js/contact.js"></script>
+  <script src="js/fadein.js"></script>
   <script src="js/footer.js"></script>
 
 
