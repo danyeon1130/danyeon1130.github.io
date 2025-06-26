@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
   const fadeEls = document.querySelectorAll('.fade-in-on-scroll');
   const options = {
-    threshold: 0.15 // 화면에 15%만 보여도 트리거
+    threshold: 0.5 // 화면 중간쯤(50%)에서 트리거
   };
 
   const observer = new IntersectionObserver((entries, observer) => {

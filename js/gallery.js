@@ -1,3 +1,4 @@
+// 실제 갤러리 이미지들 (img/gallery 폴더 사용)
 const imagePaths = [];
 for (let i = 1; i <= 5; i++) {
   imagePaths.push(`img/gall_test/${i}.png`);
@@ -61,10 +62,28 @@ const swiper = new Swiper('.main-swiper', {
 
 let modalSwiper;
 
+// ======= 공통: 모바일 뷰포트 높이 계산 =======
+function setModalHeight() {
+  const modal = document.getElementById("imageModal");
+  if (!modal) return;
+  const vh = window.innerHeight * 0.01;
+  modal.style.setProperty('--vh', `${vh}px`);
+}
+
 function openModal(index) {
   document.body.style.overflow = 'hidden';
+  
+  // 모바일에서 주소창 숨기기 위한 스크롤 방지
+  document.documentElement.style.overflow = 'hidden';
+  document.documentElement.style.height = '100%';
+  
   const modal = document.getElementById("imageModal");
   modal.style.display = "block";
+  
+  setModalHeight();
+  
+  // 화면 크기 변경시에도 높이 재설정
+  window.addEventListener('resize', setModalHeight);
 
   if (!modalSwiper) {
     modalSwiper = new Swiper('.modal-swiper', {
@@ -74,6 +93,7 @@ function openModal(index) {
         prevEl: '.swiper-button-prev',
       },
       swipeHandler: '.modal-image', // 이미지만 스와이프 허용
+      centeredSlides: true, // 슬라이드를 중앙에 정렬
     });
   } else {
     modalSwiper.update(); // 모달 다시 열 때 슬라이더 갱신
@@ -84,6 +104,12 @@ function openModal(index) {
 
 function closeModal() {
   document.body.style.overflow = ''; // 원래대로
+  document.documentElement.style.overflow = ''; // 원래대로
+  document.documentElement.style.height = ''; // 원래대로
+  
+  // 리사이즈 이벤트 리스너 제거
+  window.removeEventListener('resize', setModalHeight);
+  
   document.getElementById("imageModal").style.display = "none";
 }
 
