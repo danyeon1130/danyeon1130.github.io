@@ -1,7 +1,7 @@
 body {
   font-family: 'Noto Sans KR', sans-serif;
   background: black;
-  color: #222;
+  color: #222222;
   margin: 0;
   padding: 0;
   overflow-x: hidden;
@@ -11,18 +11,17 @@ body {
   width: 100%;
   max-width: 600px;
   margin: 0 auto;
-  background: #fff;
+  background-color: #f8f8f8;
   box-sizing: border-box;
   overflow-x: hidden;
 }
 
 .text-container {
-  padding: clamp(1rem, 4vw, 2rem);
 }
 
 .title {
   text-align: center;
-  font-size: clamp(1.5rem, 2.8vw, 1.8rem);
+  font-size: clamp(2rem, 4vw, 2.4rem);
   font-weight: 500;
   margin-bottom: 0.5em;
   letter-spacing: 0.03em;
@@ -30,9 +29,9 @@ body {
 
 .date, .venue {
   text-align: center;
-  font-size: clamp(1rem, 2.3vw, 1.1rem);
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
   margin-bottom: 0.4em;
-  color: #666;
+  color: #222222;
 }
 
 .venue {
@@ -49,17 +48,18 @@ hr {
 
 .message {
   text-align: center;
-  font-size: clamp(1rem, 2.3vw, 1.1rem);
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
   line-height: 1.8;
-  margin-bottom: clamp(1rem, 3vw, 1.5rem);
-  color: #444;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  color: #222222;
 }
 
 .parents {
   text-align: center;
-  margin-top: clamp(1rem, 3vw, 1.5rem);
-  font-size: clamp(1rem, 2.3vw, 1.1rem);
-  color: #333;
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
+  color: #222222;
+  padding-bottom: 1.5rem;
 }
 
 .parents span {
@@ -69,20 +69,16 @@ hr {
 
 .top-image-container {
   text-align: center;
-  margin: clamp(1.2rem, 4vw, 2rem);
+  margin: clamp(0rem, 0vw, 0rem);
 }
 
 .top-image-container img {
   max-width: 100%;
   height: auto;
-  border-radius: 0.5rem;
+  border-radius: 0.0rem;
 }
 
 .mid-image-container {
-  margin-top: clamp(1rem, 5vw, 2rem);
-  margin-bottom: clamp(1rem, 5vw, 2rem);
-  margin-left: 0;
-  margin-right: 0;
 }
 
 .mid-image-container img {
@@ -114,6 +110,34 @@ hr {
   transition: opacity 1.0s ease, transform 1.0s cubic-bezier(0.5,0,0,1);
 }
 
+/* 컨테이너(필수 아님) */
+.svg-draw {
+  display: block;
+  margin-left: 25%;
+}
+
+/* 실제 선을 그릴 도형에 이 클래스를 붙입니다 */
+.stroke {
+  stroke: #333;
+  fill: none;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  filter: drop-shadow(0 0 2px rgba(0,0,0,0.2));
+}
+
+/* 화면에 보일 때 부여되는 클래스 */
+.stroke.animate {
+  animation: draw 8s ease forwards;
+}
+
+@keyframes draw {
+  to {
+      stroke-dashoffset: 0;
+  }
+}
 
 @media (max-width: 600px) {
   .container {
@@ -122,14 +146,14 @@ hr {
   }
 
   .title {
-    font-size: clamp(1rem, 4vw, 1.15rem);
+    font-size: clamp(1.5rem, 5vw, 1.75rem);
   }
 
   .date, .venue, .parents {
-    font-size: clamp(0.9rem, 3vw, 0.96rem);
+    font-size: clamp(0.9rem, 4vw, 1rem);
   }
 
   .message {
-    font-size: clamp(0.95rem, 3vw, 0.98rem);
+    font-size: clamp(0.9rem, 4vw, 1rem);
   }
 }

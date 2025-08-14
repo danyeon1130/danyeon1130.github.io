@@ -1,19 +1,8 @@
 // 실제 갤러리 이미지들 (img/gallery 폴더 사용)
 const imagePaths = [];
-for (let i = 1; i <= 5; i++) {
-  imagePaths.push(`img/gall_test/${i}.png`);
-}
-for (let i = 1; i <= 5; i++) {
-  imagePaths.push(`img/gall_test/${i}.png`);
-}
-for (let i = 1; i <= 5; i++) {
-  imagePaths.push(`img/gall_test/${i}.png`);
-}
-for (let i = 1; i <= 5; i++) {
-  imagePaths.push(`img/gall_test/${i}.png`);
-}
-for (let i = 1; i <= 5; i++) {
-  imagePaths.push(`img/gall_test/${i}.png`);
+for (let i = 1; i <= 40; i++) {
+  const num = i.toString().padStart(3, "0");
+  imagePaths.push(`img/gall_test/img_${num}_web.jpg`);
 }
 
 const pageSize = 9;
@@ -99,7 +88,7 @@ function openModal(index) {
     modalSwiper.update(); // 모달 다시 열 때 슬라이더 갱신
   }
 
-  modalSwiper.slideTo(index, 0);
+  modalSwiper.slideToLoop(index, 0);
 }
 
 function closeModal() {

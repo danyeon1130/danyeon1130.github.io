@@ -1,3 +1,10 @@
+.gallery-date-text{
+  font-family: 'Dancing Script', cursive;
+  line-height: 0em;
+  font-size: clamp(2rem, 4vw, 2.4rem);
+  text-align: center;
+}
+
 .swiper {
   width: 100%;
   max-width: 20rem; /* 기존 640px */
@@ -36,7 +43,6 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 0.2rem; /* 10px */
-  padding: 0.2rem;
   box-sizing: border-box;
 }
 
@@ -85,7 +91,6 @@
   align-items: center;
   width: 100%;
   height: 100%;
-  padding: 1rem;
   box-sizing: border-box;
 }
 
@@ -95,19 +100,30 @@
   object-fit: contain;
   transition: none !important;
   transform: none !important;
-  max-width: calc(100% - 2rem);
-  max-height: calc(100% - 2rem);
   display: block;
   margin: auto;
 }
 
 .modal .swiper-button-next,
 .modal .swiper-button-prev {
-  color: #fff;
-  width: 0.625rem;
-  height: 0.625rem;
-  top: 50%;
-  transform: translateY(-50%);
+  position: absolute;
+  bottom: 2.5rem;
+  top: auto;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2.5rem;
+  height: 2.5rem;
+  color: #aaa;
+  z-index: 10;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.modal .swiper-button-prev {
+  left: calc(50% - 10rem);
+}
+.modal .swiper-button-next {
+  left: calc(50% + 10rem);
 }
 
 :root {
@@ -118,7 +134,7 @@
   position: absolute;
   top: 1.25rem;
   right: 1.875rem;
-  font-size: 2rem;
+  font-size: clamp(1.5rem, 5vw, 1.75rem);
   color: #fff;
   cursor: pointer;
   z-index: 2000;
@@ -133,18 +149,17 @@ h2 {
 /* 모바일 추가 최적화 */
 @media screen and (max-width: 768px) {
   .modal .swiper-slide {
-    padding: 0.5rem;
   }
   
   .modal .swiper-slide img {
-    max-width: calc(100% - 1rem);
-    max-height: calc(100% - 1rem);
+    max-width: calc(100%);
+    max-height: calc(100%);
   }
   
   .modal-close {
     top: 1rem;
     right: 1rem;
-    font-size: 1.5rem;
+    font-size: clamp(1.25rem, 6vw, 1.5rem);
     z-index: 2000;
   }
   
@@ -152,6 +167,14 @@ h2 {
   .modal .swiper-button-prev {
     width: 2rem;
     height: 2rem;
-    margin-top: -1rem;
+    bottom: 1.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .modal .swiper-button-prev {
+    left: calc(50% - 10rem);
+  }
+  .modal .swiper-button-next {
+    left: calc(50% + 10rem);
   }
 }

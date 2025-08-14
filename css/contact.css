@@ -15,7 +15,7 @@
 
 .contact-title {
   font-weight: bold;
-  font-size: clamp(1.5rem, 2.8vw, 1.8rem);
+  font-size: clamp(1.5rem, 3.5vw, 1.8rem);
   color: #333;
   margin-bottom: 1rem;
   text-align: center;
@@ -23,7 +23,7 @@
 
 .contact-subtitle {
   color: #777;
-  font-size: clamp(1rem, 2.3vw, 1.1rem);
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
   margin-bottom: 1.5em;
   text-align: center;
 }
@@ -35,8 +35,8 @@
   border-radius: 2rem;
   border: none;
   margin: 0.5em;
-  font-size: clamp(1rem, 2.3vw, 1.3rem);
-  background: linear-gradient(135deg, #f7d9c4, #fce9e3);
+  font-size: clamp(1rem, 2.5vw, 1.3rem);
+  background: linear-gradient(135deg, #c4c4c4ec, #c4c4c480);
   box-shadow: 0 0.4em 1em rgba(0, 0, 0, 0.1);
   cursor: pointer;
   /* fade-in-on-scroll과 충돌하지 않도록 hover 효과만 별도 transition */
@@ -75,7 +75,7 @@
   justify-content: center;  /* 가로(수평) 정렬 */
   margin-top: 0.5em;
   margin-bottom: 2em;
-  font-size: clamp(1.3rem, 2.5vw, 1.5rem);
+  font-size: clamp(1.3rem, 3vw, 1.5rem);
   font-weight: bold;
   color: #000000;
 }
@@ -89,7 +89,7 @@
   align-items: center; /* 버튼과 텍스트 수직 중앙 맞춤 */
   justify-content: space-between;
   margin: 0.5rem 0;
-  font-size: clamp(0.8rem, 2vw, 1rem);
+  font-size: clamp(0.8rem, 3vw, 1rem);
   flex-wrap: wrap;
 }
 
@@ -128,27 +128,27 @@
 
 .contact-copy-btn {
   padding: 0.3em 0.7em;
-  background-color: #f7d9c4;
+  background-color: #c4c4c4fa;
   border: none;
   border-radius: 0.5em;
   cursor: pointer;
   transition: 0.2s;
-  font-size: clamp(0.7rem, 1.9vw, 0.9rem);
+  font-size: clamp(0.8rem, 3vw, 0.9rem);
   margin-left: auto; /* ✅ 오른쪽 정렬 */
   color: black;
 }
 
 .contact-copy-btn:hover {
-  background-color: #fbcbb6;
+  background-color: #c4c4c49c;
 }
 
 .contact-close-btn {
   margin-top: 1rem;
   padding: 0.5rem clamp(7rem, 14vw, 10rem);
-  background-color: #ffd54f;
+  background-color: #c4c4c4ec;
   border: none;
   border-radius: 0.5rem;
-  font-size: clamp(0.8rem, 2vw, 1.1rem);
+  font-size: clamp(0.8rem, 3vw, 1rem);
   font-weight: bold;
   cursor: pointer;
   transition: 0.2s;
@@ -156,7 +156,7 @@
 }
 
 .contact-close-btn:hover {
-  background-color: #ffc107;
+  background-color: #c4c4c480;
 }
 
 .phone-contact-line {
@@ -189,7 +189,7 @@
 .phone-title,
 .phone-name {
   font-weight: bold;
-  font-size: clamp(1rem, 2.3vw, 1.1rem);
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
 }
 
 .phone-contact-buttons {

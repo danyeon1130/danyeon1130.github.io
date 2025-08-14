@@ -1,19 +1,19 @@
 .calendar-date-text{
   font-family: 'Dancing Script', cursive;
   line-height: 0em;
-  font-size: 2rem;
+  font-size: clamp(2rem, 4vw, 2.4rem);
   text-align: center;
 }
 
 .calendar-text{
   font-family: 'Noto Sans KR', sans-serif;
   line-height: 1em;
-  font-size: 1rem;
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
   text-align: center;
 }
 
 .calendar-container {
-  background: #fff;
+  background: #f8f8f8;
   padding-bottom: clamp(1rem, 4vw, 2rem);
 }
 
@@ -21,7 +21,7 @@
 .calendar-divider-bottom {
   width: 100%;
   height: 1px;
-  background-color: #e0e0e0;
+  background-color: #f8f8f8;
   margin: clamp(0.5rem, 1vw, 0.8rem) 0;
 }
 
@@ -36,7 +36,7 @@
 .calendar-table td {
   text-align: center;
   padding: clamp(0.5rem, 1.5vw, 0.7rem) 0;
-  font-size: clamp(0.95rem, 2vw, 1.05rem);
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
   color: #444;
 }
 
@@ -89,7 +89,7 @@
 
 .d-day-message {
   text-align: center;
-  font-size: clamp(1rem, 2.3vw, 1.15rem);
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
   margin-top: clamp(0.7rem, 2vw, 1rem);
   margin-bottom: clamp(0.5rem, 1.5vw, 0.8rem);
   color: #bc6c1c;
@@ -105,7 +105,7 @@
 
   .calendar-table th,
   .calendar-table td {
-    font-size: clamp(0.85rem, 3vw, 0.95rem);
+    font-size: clamp(0.9rem, 4vw, 1rem);
     padding: clamp(0.4rem, 1vw, 0.6rem) 0;
   }
 }
