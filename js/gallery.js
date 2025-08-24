@@ -1,8 +1,15 @@
-// 실제 갤러리 이미지들 (img/gallery 폴더 사용)
+// 모달용 이미지
 const imagePaths = [];
 for (let i = 1; i <= 40; i++) {
-  const num = i.toString().padStart(3, "0");
-  imagePaths.push(`img/gall_test/img_${num}_web.jpg`);
+  //const num = i.toString().padStart(3, "0");
+  imagePaths.push(`img/resize_img/${i}.jpg`);
+}
+
+// 슬라이더용 이미지지
+const imagePaths2 = [];
+for (let i = 1; i <= 40; i++) {
+  //const num = i.toString().padStart(3, "0");
+  imagePaths2.push(`img/crop_img/${i}.jpg`);
 }
 
 const pageSize = 9;
@@ -10,11 +17,11 @@ const wrapper = document.getElementById("swiperWrapper");
 const modalWrapper = document.getElementById("modalSwiperWrapper");
 
 // 메인 슬라이더 이미지 페이지 생성
-for (let i = 0; i < imagePaths.length; i += pageSize) {
+for (let i = 0; i < imagePaths2.length; i += pageSize) {
   const slide = document.createElement("div");
   slide.className = "swiper-slide main-swiper-slide";
 
-  imagePaths.slice(i, i + pageSize).forEach((src, index) => {
+  imagePaths2.slice(i, i + pageSize).forEach((src, index) => {
     const img = document.createElement("img");
     const realIndex = i + index;
     img.src = src;
@@ -89,6 +96,23 @@ function openModal(index) {
   }
 
   modalSwiper.slideToLoop(index, 0);
+
+  const images = modalWrapper.querySelectorAll('img');
+  let loaded = 0;
+  images.forEach(img => {
+    img.onload = () => {
+      loaded++;
+      if (loaded === images.length) {
+        if (modalSwiper) modalSwiper.update();
+        modalSwiper.slideToLoop(index, 0);
+      }
+    };
+  });
+  // 만약 이미지가 이미 캐시에 있으면 onload가 안 불릴 수 있으니, 강제 update도 추가
+  setTimeout(() => {
+    if (modalSwiper) modalSwiper.update();
+    modalSwiper.slideToLoop(index, 0);
+  }, 500);
 }
 
 function closeModal() {

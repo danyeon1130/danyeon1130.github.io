@@ -83,11 +83,11 @@ function showDdayMessage() {
   const diff = Math.floor((dDay - today) / (1000 * 60 * 60 * 24));
   let msg = '';
   if (diff > 0) {
-    msg = `신랑 ♥ 신부 결혼식이 ${diff}일 남았습니다.`;
+    msg = `연수 ♥ 단비 결혼식이 ${diff}일 남았습니다.`;
   } else if (diff === 0) {
-    msg = `신랑 ♥ 신부 결혼식 당일 입니다!`;
+    msg = `연수 ♥ 단비 결혼식 당일 입니다!`;
   } else {
-    msg = `신랑 ♥ 신부 결혼식으로부터 ${Math.abs(diff)}일 지났습니다.`;
+    msg = `연수 ♥ 단비 결혼식으로부터 ${Math.abs(diff)}일 지났습니다.`;
   }
   document.getElementById('dDayMessage').textContent = msg;
 }
