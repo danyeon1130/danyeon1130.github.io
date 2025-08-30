@@ -1,5 +1,25 @@
+@font-face {
+  font-family: 'Eulyoo1945';
+  src: url('../font/Eulyoo1945-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Eulyoo1945';
+  src: url('../font/Eulyoo1945-SemiBold.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+    font-family: 'SchoolSafeDictation';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-5@1.0/HakgyoansimBadasseugiTTF-L.woff2') format('woff2');
+    font-weight: normal;
+    font-display: swap;
+}
+
+
 body {
-  font-family: 'Noto Sans KR', sans-serif;
+  font-family: 'SchoolSafeDictation', serif;
   background: black;
   color: #222222;
   margin: 0;
@@ -14,6 +34,25 @@ body {
   background-color: #f9fafc;
   box-sizing: border-box;
   overflow-x: hidden;
+  position: relative;
+}
+
+#music-toggle {
+  position: fixed;
+  top: clamp(0.8em, 1.2vw, 1rem);
+  right: calc(50vw - min(300px, 50vw) + clamp(0.8rem, 1.2vw, 1rem));
+  padding: clamp(0.35rem, 0.35vw, 0.35rem);
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 2rem;
+  cursor: pointer;
+  font-size: clamp(0.7rem, 0.9vw, 0.9rem);
+  z-index: 1000;
+}
+
+#music-toggle.on {
+  background-color: #002803; /* 켜졌을 때 초록색 */
 }
 
 .text-container {
@@ -68,14 +107,18 @@ hr {
 }
 
 .top-image-container {
-  text-align: center;
-  margin: clamp(0rem, 0vw, 0rem);
+  width: 100%;
+  overflow: hidden; /* 좌우 넘치는 부분 잘리게 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .top-image-container img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 0.0rem;
+  height: 100%;       /* 높이는 유지 */
+  width: auto;        /* 가로는 자동으로 늘어나게 */
+  display: block;
+  margin: 0 auto;     /* 중앙 정렬 */
 }
 
 .mid-image-container {

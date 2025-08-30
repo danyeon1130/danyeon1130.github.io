@@ -1,46 +1,78 @@
+@font-face {
+    font-family: 'IAmAPlayer';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-2@1.0/IAMAPLAYER.woff2') format('woff2');
+    font-weight: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'GMarketSans';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: 500;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'GMarketSans';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff') format('woff');
+    font-weight: 300;
+    font-display: swap;
+}
+
+.calendar-container {
+  padding-top: clamp(3rem, 6vw, 4rem);
+  bottom: clamp(5rem, 8vw, 6rem);
+  background: #f9fafc;
+}
+
+.calendar-container hr {
+  border: none;
+  border-top: 2.5px solid #0000003a;
+  margin-left: 7.5%;
+  margin-right: 7.5%;
+  width: 85%;
+}
+
 .calendar-date-text{
-  font-family: 'Dancing Script', cursive;
+  font-family: 'SchoolSafeDictation', sans-serif;
   line-height: 0em;
-  font-size: clamp(2rem, 4vw, 2.4rem);
+  font-size: clamp(2.5rem, 4.5vw, 2.9rem);
   text-align: center;
+  background: #f7f7f7;
 }
 
 .calendar-text{
-  font-family: 'Noto Sans KR', sans-serif;
+  font-family: 'SchoolSafeDictation', serif;
   line-height: 1em;
   font-size: clamp(1rem, 2.5vw, 1.2rem);
   text-align: center;
 }
 
-.calendar-container {
-  background: #f7f7f7;
-  padding-bottom: clamp(1rem, 4vw, 2rem);
-}
-
 .calendar-divider-top,
 .calendar-divider-bottom {
   width: 100%;
-  height: 1px;
   background-color: #f8f8f8;
   margin: clamp(0.5rem, 1vw, 0.8rem) 0;
 }
 
 .calendar-table {
-  width: 100%;
+  width: 80%;
   border-collapse: collapse;
-  margin: 0;
+  margin: 0 auto;
   table-layout: fixed;
+  font-family: 'SchoolSafeDictation', sans-serif;
+  font-weight: 300;
 }
 
 .calendar-table th,
 .calendar-table td {
   text-align: center;
-  padding: clamp(0.5rem, 1.5vw, 0.7rem) 0;
+  padding: clamp(1.5rem, 2.5vw, 1.7rem) 0;
   font-size: clamp(1rem, 2.5vw, 1.2rem);
 }
 
 .calendar-table th {
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .calendar-table th:first-child,
@@ -61,7 +93,7 @@
 .calendar-table td:not(:empty)::before {
   content: '';
   position: absolute;
-  top: 50%;
+  top: 45%;
   left: 50%;
   transform: translate(-50%, -50%);  
   width: clamp(2rem, 5vw, 2.5rem);
@@ -87,6 +119,7 @@
 
 .d-day-message {
   text-align: center;
+  font-family: 'SchoolSafeDictation', serif;
   font-size: clamp(1rem, 2.5vw, 1.2rem);
   margin-top: clamp(0.7rem, 2vw, 1rem);
   margin-bottom: clamp(0.5rem, 1.5vw, 0.8rem);
@@ -102,7 +135,7 @@
 
   .calendar-table th,
   .calendar-table td {
-    font-size: clamp(0.9rem, 4vw, 1rem);
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
     padding: clamp(0.4rem, 1vw, 0.6rem) 0;
   }
 }

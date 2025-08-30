@@ -1,5 +1,5 @@
 .contact-body {
-  font-family: 'Noto Sans KR', sans-serif;
+  font-family: 'SchoolSafeDictation', sans-serif;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -8,7 +8,7 @@
   margin-left: auto;
   margin-right: auto;
   box-sizing: border-box;
-  background-color: white;
+  background-color: rgba(210,210,210,0.3);
 }
 
 .contact-title {
@@ -34,6 +34,7 @@
   border: none;
   margin: 0.5em;
   font-size: clamp(1rem, 2.5vw, 1.3rem);
+  font-family: 'SchoolSafeDictation', sans-serif;
   background: linear-gradient(135deg, #c4c4c4ec, #c4c4c480);
   box-shadow: 0 0.4em 1em rgba(0, 0, 0, 0.1);
   cursor: pointer;

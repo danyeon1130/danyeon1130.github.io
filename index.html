@@ -2,19 +2,19 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8">
-  <title>임연수 ♥ 이단비 결혼합니다</title>
+  <title>연수 ♥ 단비 결혼합니다</title>
 
-  <meta name="author" content="신랑 신부 이름 또는 제작자 이름">
-  <meta name="description" content="사랑으로 물들어가는 계절, 연인에서 부부라는 이름으로 평생을 함께 하고자 합니다.">
+  <meta name="author" content="임연수">
+  <meta name="description" content="사랑의 길을 함께 걸어가는 두 사람의 첫날을 함께 빛내 주세요.">
 
   <!-- 모바일 최적화 -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 
   <!-- Open Graph (SNS 공유 최적화) -->
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="우리의 결혼식에 초대합니다" />
-  <meta property="og:description" content="사랑으로 물들어가는 계절, 연인에서 부부라는 이름으로 평생을 함께 하고자 합니다." />
-  <meta property="og:image" content="https://danyeon1130.github.io/img/head.png" />
+  <meta property="og:title" content="연수 ♥ 단비 결혼합니다" />
+  <meta property="og:description" content="사랑의 길을 함께 걸어가는 두 사람의 첫날을 함께 빛내 주세요." />
+  <meta property="og:image" content="https://danyeon1130.github.io/img/og_img.png" />
   <meta property="og:url" content="https://danyeon1130.github.io" />
 
   <!-- 전화번호 자동링크 방지 -->
@@ -44,7 +44,15 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
 </head>
 <body>
+  <audio id="bg-music" loop>
+    <source src="music/music.mp3" type="audio/mpeg">
+  </audio>
+  <!-- <button id="music-toggle">🔇</button> 삭제 -->
+
   <div class="container">
+    <div class="sticky-top-right">
+      <button id="music-toggle">🔇</button>
+    </div>
     <div class="top-image-container">
       <img src="img/161.jpg" alt="설명 텍스트">
     </div>
@@ -54,16 +62,19 @@
       <div class="date">2025년 11월 30일 일요일 오후 3:40</div>
       <div class="venue">더링크호텔 서울 4층 플라자홀</div>
       <div class="message fade-in-on-scroll">
-        사랑으로 물들어가는 계절,<br>
-        연인에서 부부라는 이름으로<br>
-        평생을 함께 하고자 합니다.<br>
+        우리가 서로 뜨겁게 사랑한다는 것은<br>
+        그대는 나의 세상을<br>
+        나는 그대의 세상을<br>
+        함께 짊어지고<br>
+        새벽을 향해 걸어가겠다는 것입니다.<br>
+        - 안도현, '사랑한다는 것' 중에서<br>
         <br>
         귀한 걸음 하시어<br>
-        두 사람의 언약을 지켜봐 주시면<br>
+        두 사람의 시작을 지켜봐 주시면<br>
         더 없는 기쁨으로 간직하겠습니다.
       </div>
       <div class="parents fade-in-on-scroll" style="margin-bottom: 1.5em;">
-        <span>신랑 임연수 신부 이단비</span>
+        <span>신랑 임연수 · 신부 이단비</span>
       </div>
     </div>
 
@@ -71,8 +82,8 @@
       <img src="img/10.jpg" alt="설명 텍스트">
     </div>
 
-    <div class="calendar-container" style="margin-top: 3em;">
-      <p class="calendar-date-text fade-in-on-scroll">Date</p>
+    <div class="calendar-container" style="padding-bottom: 3em; padding-top: 3em;">
+      <p class="calendar-date-text fade-in-on-scroll">WEDDING DATE</p>
       <p class="calendar-text fade-in-on-scroll">2025년 11월 30일 일요일 | 오후 3시 40분</p>
 
       <div class="calendar-divider-top"></div>
@@ -99,8 +110,8 @@
     </div>
 
     <!-- Gallery -->
-    <div class="gallery" style="background-color: #eaeaea; margin-top: 3em; padding-top: 3em; padding-bottom: 4em;">
-      <p class="calendar-date-text fade-in-on-scroll">Gallery</p>
+    <div class="gallery" style="background-color: rgba(210,210,210,0.3); padding-top: 3em; padding-bottom: 4em;">
+      <p class="calendar-date-text fade-in-on-scroll">GALLERY</p>
       <!-- 슬라이더 컨테이너 -->
       <div class="swiper main-swiper fade-in-on-scroll">
         <div class="swiper-wrapper" id="swiperWrapper"></div>
@@ -125,7 +136,7 @@
     <!-- Map -->
     <div class="map-container" style="margin-top: 4em;">
       <!-- 지도 화면 -->
-      <p class="calendar-date-text fade-in-on-scroll">Location</p>
+      <p class="calendar-date-text fade-in-on-scroll">LOCATION</p>
       <p class="calendar-text fade-in-on-scroll">더링크호텔 서울 4층 플라자홀</p>
       <br/>
       <script type="text/javascript" src="https://oapi.map.naver.com/openapi/v3/maps.js?ncpKeyId=lcqu5vpbbs"></script>
@@ -175,13 +186,6 @@
         </div>
 
         <div class="section fade-in-on-scroll">
-          <h3><img src="icon/car.png" alt="자가용"> 자가용</h3>
-          <p>동호대교 방면<br>
-          동호대교 남단에서 3호선 압구정역, 7호선 학동역을 지나<br>
-          차병원 사거리에서 2호선 역삼역 방면으로 200m 직진 후 우측 건물</p>
-        </div>
-
-        <div class="section fade-in-on-scroll">
           <h3><img src="icon/parking.png" alt="주차"> 주차</h3>
           <p>내부 주차 90분 무료</p>
           <p>추가 10분당 1000원</p>
@@ -190,9 +194,136 @@
       <br/>
     </div>
 
+    <!-- Contact -->
+    <div class="contact-body" style="padding-top: 2em;">
+      <p class="calendar-date-text fade-in-on-scroll">CONTACT</p>
+
+      <!-- 신랑신부 연락처 라인 -->
+      <!-- 신랑연락처 -->
+      <div class="phone-contact-line fade-in-on-scroll">
+        <div class="phone-contact-info">
+          <div class="phone-title">신랑</div>
+          <div class="phone-name">임연수</div>
+        </div>
+        <div class="phone-contact-buttons">
+          <button onclick="location.href='tel:010-2668-4736'">
+            <svg class="bi bi-telephone-fill" fill="currentColor" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" d="M2.267.98a1.636 1.636 0 0 1 2.448.152l1.681 2.162c.309.396.418.913.296 1.4l-.513 2.053a.636.636 0 0 0 .167.604L8.65 9.654a.636.636 0 0 0 .604.167l2.052-.513a1.636 1.636 0 0 1 1.401.296l2.162 1.681c.777.604.849 1.753.153 2.448l-.97.97c-.693.693-1.73.998-2.697.658a17.47 17.47 0 0 1-6.571-4.144A17.47 17.47 0 0 1 .639 4.646c-.34-.967-.035-2.004.658-2.698l.97-.969z"/>
+            </svg>
+          </button>
+          <button onclick="location.href='sms:010-2668-4736'">
+            <svg class="bi bi-chat-dots-fill" fill="currentColor" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" d="M16 8c0 3.866-3.582 7-8 7a9.06 9.06 0 0 1-2.347-.306c-.584.296-1.925.864-4.181 1.234-.2.032-.352-.176-.273-.362.354-.836.674-1.95.77-2.966C.744 11.37 0 9.76 0 8c0-3.866 3.582-7 8-7s8 3.134 8 7zM5 8a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+      <!-- 신부 연락처 -->
+      <div class="phone-contact-line fade-in-on-scroll">
+        <div class="phone-contact-info">
+          <div class="phone-title">신부</div>
+          <div class="phone-name">이단비</div>
+        </div>
+        <div class="phone-contact-buttons">
+          <button onclick="location.href='tel:010-8300-8921'">
+            <svg class="bi bi-telephone-fill" fill="currentColor" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" d="M2.267.98a1.636 1.636 0 0 1 2.448.152l1.681 2.162c.309.396.418.913.296 1.4l-.513 2.053a.636.636 0 0 0 .167.604L8.65 9.654a.636.636 0 0 0 .604.167l2.052-.513a1.636 1.636 0 0 1 1.401.296l2.162 1.681c.777.604.849 1.753.153 2.448l-.97.97c-.693.693-1.73.998-2.697.658a17.47 17.47 0 0 1-6.571-4.144A17.47 17.47 0 0 1 .639 4.646c-.34-.967-.035-2.004.658-2.698l.97-.969z"/>
+            </svg>
+          </button>
+          <button onclick="location.href='sms:010-8300-8921'">
+            <svg class="bi bi-chat-dots-fill" fill="currentColor" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" d="M16 8c0 3.866-3.582 7-8 7a9.06 9.06 0 0 1-2.347-.306c-.584.296-1.925.864-4.181 1.234-.2.032-.352-.176-.273-.362.354-.836.674-1.95.77-2.966C.744 11.37 0 9.76 0 8c0-3.866 3.582-7 8-7s8 3.134 8 7zM5 8a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- 혼주 연락처 모달 -->
+      <button class="contact-btn fade-in-on-scroll" id="contactBtn">혼주 연락처 보기</button>
+      <div class="contact-modal" id="contactModal">
+        <div class="contact-modal-content">
+          <!-- 신랑 -->
+          <div class="phone-module-contact-line">
+            <div class="phone-contact-info">
+              <div class="phone-title">신랑父</div>
+              <div class="phone-name">임종용</div>
+            </div>
+            <div class="phone-contact-buttons">
+              <button onclick="location.href='tel:010-2667-7586'">
+                <svg class="bi bi-telephone-fill" fill="currentColor" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" d="M2.267.98a1.636 1.636 0 0 1 2.448.152l1.681 2.162c.309.396.418.913.296 1.4l-.513 2.053a.636.636 0 0 0 .167.604L8.65 9.654a.636.636 0 0 0 .604.167l2.052-.513a1.636 1.636 0 0 1 1.401.296l2.162 1.681c.777.604.849 1.753.153 2.448l-.97.97c-.693.693-1.73.998-2.697.658a17.47 17.47 0 0 1-6.571-4.144A17.47 17.47 0 0 1 .639 4.646c-.34-.967-.035-2.004.658-2.698l.97-.969z"/>
+                </svg>
+              </button>
+              <button onclick="location.href='sms:010-2667-7586'">
+                <svg class="bi bi-chat-dots-fill" fill="currentColor" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" d="M16 8c0 3.866-3.582 7-8 7a9.06 9.06 0 0 1-2.347-.306c-.584.296-1.925.864-4.181 1.234-.2.032-.352-.176-.273-.362.354-.836.674-1.95.77-2.966C.744 11.37 0 9.76 0 8c0-3.866 3.582-7 8-7s8 3.134 8 7zM5 8a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="phone-module-contact-line">
+            <div class="phone-contact-info">
+              <div class="phone-title">신랑母</div>
+              <div class="phone-name">최희승</div>
+            </div>
+            <div class="phone-contact-buttons">
+              <button onclick="location.href='tel:010-3997-4736'">
+                <svg class="bi bi-telephone-fill" fill="currentColor" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" d="M2.267.98a1.636 1.636 0 0 1 2.448.152l1.681 2.162c.309.396.418.913.296 1.4l-.513 2.053a.636.636 0 0 0 .167.604L8.65 9.654a.636.636 0 0 0 .604.167l2.052-.513a1.636 1.636 0 0 1 1.401.296l2.162 1.681c.777.604.849 1.753.153 2.448l-.97.97c-.693.693-1.73.998-2.697.658a17.47 17.47 0 0 1-6.571-4.144A17.47 17.47 0 0 1 .639 4.646c-.34-.967-.035-2.004.658-2.698l.97-.969z"/>
+                </svg>
+              </button>
+              <button onclick="location.href='sms:010-3997-4736'">
+                <svg class="bi bi-chat-dots-fill" fill="currentColor" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" d="M16 8c0 3.866-3.582 7-8 7a9.06 9.06 0 0 1-2.347-.306c-.584.296-1.925.864-4.181 1.234-.2.032-.352-.176-.273-.362.354-.836.674-1.95.77-2.966C.744 11.37 0 9.76 0 8c0-3.866 3.582-7 8-7s8 3.134 8 7zM5 8a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <!-- 신부 -->
+          <div class="phone-module-contact-line">
+            <div class="phone-contact-info">
+              <div class="phone-title">신부父</div>
+              <div class="phone-name">이호준</div>
+            </div>
+            <div class="phone-contact-buttons">
+              <button onclick="location.href='tel:010-3145-3557'">
+                <svg class="bi bi-telephone-fill" fill="currentColor" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" d="M2.267.98a1.636 1.636 0 0 1 2.448.152l1.681 2.162c.309.396.418.913.296 1.4l-.513 2.053a.636.636 0 0 0 .167.604L8.65 9.654a.636.636 0 0 0 .604.167l2.052-.513a1.636 1.636 0 0 1 1.401.296l2.162 1.681c.777.604.849 1.753.153 2.448l-.97.97c-.693.693-1.73.998-2.697.658a17.47 17.47 0 0 1-6.571-4.144A17.47 17.47 0 0 1 .639 4.646c-.34-.967-.035-2.004.658-2.698l.97-.969z"/>
+                </svg>
+              </button>
+              <button onclick="location.href='sms:010-3145-3557'">
+                <svg class="bi bi-chat-dots-fill" fill="currentColor" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" d="M16 8c0 3.866-3.582 7-8 7a9.06 9.06 0 0 1-2.347-.306c-.584.296-1.925.864-4.181 1.234-.2.032-.352-.176-.273-.362.354-.836.674-1.95.77-2.966C.744 11.37 0 9.76 0 8c0-3.866 3.582-7 8-7s8 3.134 8 7zM5 8a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="phone-module-contact-line">
+            <div class="phone-contact-info">
+              <div class="phone-title">신부母</div>
+              <div class="phone-name">최경숙</div>
+            </div>
+            <div class="phone-contact-buttons">
+              <button onclick="location.href='tel:010-3359-6797'">
+                <svg class="bi bi-telephone-fill" fill="currentColor" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" d="M2.267.98a1.636 1.636 0 0 1 2.448.152l1.681 2.162c.309.396.418.913.296 1.4l-.513 2.053a.636.636 0 0 0 .167.604L8.65 9.654a.636.636 0 0 0 .604.167l2.052-.513a1.636 1.636 0 0 1 1.401.296l2.162 1.681c.777.604.849 1.753.153 2.448l-.97.97c-.693.693-1.73.998-2.697.658a17.47 17.47 0 0 1-6.571-4.144A17.47 17.47 0 0 1 .639 4.646c-.34-.967-.035-2.004.658-2.698l.97-.969z"/>
+                </svg>
+              </button>
+              <button onclick="location.href='sms:010-3359-6797'">
+                <svg class="bi bi-chat-dots-fill" fill="currentColor" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" d="M16 8c0 3.866-3.582 7-8 7a9.06 9.06 0 0 1-2.347-.306c-.584.296-1.925.864-4.181 1.234-.2.032-.352-.176-.273-.362.354-.836.674-1.95.77-2.966C.744 11.37 0 9.76 0 8c0-3.866 3.582-7 8-7s8 3.134 8 7zM5 8a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <button class="contact-close-btn" onclick="closeContactModal('contactModal')">닫기</button>
+        </div>
+      </div>
+    </div>
 
     <!-- Account -->
-    <div class="contact-body">
+    <div class="contact-body" style="padding-top: 2em;">
       <div class="contact-title fade-in-on-scroll">마음 전하실 곳</div>
       <div class="contact-subtitle fade-in-on-scroll">"신랑 & 신부에게 축하의 마음을 전해주세요."</div>
 
@@ -211,11 +342,11 @@
               <div class="contact-account-top">
                 <span class="contact-label">신랑</span>
                 <span class="contact-value">임연수</span>
-                <button class="contact-copy-btn" onclick="copyToClipboard('번호1')">복사하기</button>
+                <button class="contact-copy-btn" onclick="copyToClipboard('국민 808802-04-121626')">복사하기</button>
               </div>
               <div class="contact-account-bottom">
-                <span class="contact-label">하나은행</span>
-                <span class="contact-value">12112545965235</span>
+                <span class="contact-label">국민은행</span>
+                <span class="contact-value">808802-04-121626</span>
               </div>
             </div>
           </div>
@@ -239,11 +370,11 @@
               <div class="contact-account-top">
                 <span class="contact-label">어머니</span>
                 <span class="contact-value">최희승</span>
-                <button class="contact-copy-btn" onclick="copyToClipboard('번호1')">복사하기</button>
+                <button class="contact-copy-btn" onclick="copyToClipboard('국민 657801-01-075066')">복사하기</button>
               </div>
               <div class="contact-account-bottom">
-                <span class="contact-label">하나은행</span>
-                <span class="contact-value">12112545965235</span>
+                <span class="contact-label">국민은행</span>
+                <span class="contact-value">657801-01-075066</span>
               </div>
             </div>
           </div>
@@ -264,11 +395,11 @@
               <div class="contact-account-top">
                 <span class="contact-label">신부</span>
                 <span class="contact-value">이단비</span>
-                <button class="contact-copy-btn" onclick="copyToClipboard('번호1')">복사하기</button>
+                <button class="contact-copy-btn" onclick="copyToClipboard('신한 110-575-195555')">복사하기</button>
               </div>
               <div class="contact-account-bottom">
-                <span class="contact-label">하나은행</span>
-                <span class="contact-value">12112545965235</span>
+                <span class="contact-label">신한은행</span>
+                <span class="contact-value">110-575-195555</span>
               </div>
             </div>
           </div>
@@ -278,11 +409,11 @@
               <div class="contact-account-top">
                 <span class="contact-label">아버지</span>
                 <span class="contact-value">이호준</span>
-                <button class="contact-copy-btn" onclick="copyToClipboard('번호1')">복사하기</button>
+                <button class="contact-copy-btn" onclick="copyToClipboard('하나 031-19-22864-5')">복사하기</button>
               </div>
               <div class="contact-account-bottom">
                 <span class="contact-label">하나은행</span>
-                <span class="contact-value">12112545965235</span>
+                <span class="contact-value">031-19-22864-5</span>
               </div>
             </div>
           </div>
@@ -292,11 +423,11 @@
               <div class="contact-account-top">
                 <span class="contact-label">어머니</span>
                 <span class="contact-value">최경숙</span>
-                <button class="contact-copy-btn" onclick="copyToClipboard('번호1')">복사하기</button>
+                <button class="contact-copy-btn" onclick="copyToClipboard('하나 335-910027-35807')">복사하기</button>
               </div>
               <div class="contact-account-bottom">
                 <span class="contact-label">하나은행</span>
-                <span class="contact-value">12112545965235</span>
+                <span class="contact-value">335-910027-35807</span>
               </div>
             </div>
           </div>
@@ -306,135 +437,8 @@
       </div>
     </div>
 
-    <!-- Contact -->
-    <div class="contact-body">
-
-      <!-- 신랑신부 연락처 라인 -->
-      <!-- 신랑연락처 -->
-      <div class="phone-contact-line fade-in-on-scroll">
-        <div class="phone-contact-info">
-          <div class="phone-title">신랑</div>
-          <div class="phone-name">임연수</div>
-        </div>
-        <div class="phone-contact-buttons">
-          <button onclick="location.href='tel:010-1111-1111'">
-            <svg class="bi bi-telephone-fill" fill="currentColor" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
-              <path fill-rule="evenodd" d="M2.267.98a1.636 1.636 0 0 1 2.448.152l1.681 2.162c.309.396.418.913.296 1.4l-.513 2.053a.636.636 0 0 0 .167.604L8.65 9.654a.636.636 0 0 0 .604.167l2.052-.513a1.636 1.636 0 0 1 1.401.296l2.162 1.681c.777.604.849 1.753.153 2.448l-.97.97c-.693.693-1.73.998-2.697.658a17.47 17.47 0 0 1-6.571-4.144A17.47 17.47 0 0 1 .639 4.646c-.34-.967-.035-2.004.658-2.698l.97-.969z"/>
-            </svg>
-          </button>
-          <button onclick="location.href='sms:010-1111-1111'">
-            <svg class="bi bi-chat-dots-fill" fill="currentColor" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
-              <path fill-rule="evenodd" d="M16 8c0 3.866-3.582 7-8 7a9.06 9.06 0 0 1-2.347-.306c-.584.296-1.925.864-4.181 1.234-.2.032-.352-.176-.273-.362.354-.836.674-1.95.77-2.966C.744 11.37 0 9.76 0 8c0-3.866 3.582-7 8-7s8 3.134 8 7zM5 8a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
-            </svg>
-          </button>
-        </div>
-      </div>
-      <!-- 신부 연락처 -->
-      <div class="phone-contact-line fade-in-on-scroll">
-        <div class="phone-contact-info">
-          <div class="phone-title">신부</div>
-          <div class="phone-name">이단비</div>
-        </div>
-        <div class="phone-contact-buttons">
-          <button onclick="location.href='tel:010-1111-1111'">
-            <svg class="bi bi-telephone-fill" fill="currentColor" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
-              <path fill-rule="evenodd" d="M2.267.98a1.636 1.636 0 0 1 2.448.152l1.681 2.162c.309.396.418.913.296 1.4l-.513 2.053a.636.636 0 0 0 .167.604L8.65 9.654a.636.636 0 0 0 .604.167l2.052-.513a1.636 1.636 0 0 1 1.401.296l2.162 1.681c.777.604.849 1.753.153 2.448l-.97.97c-.693.693-1.73.998-2.697.658a17.47 17.47 0 0 1-6.571-4.144A17.47 17.47 0 0 1 .639 4.646c-.34-.967-.035-2.004.658-2.698l.97-.969z"/>
-            </svg>
-          </button>
-          <button onclick="location.href='sms:010-1111-1111'">
-            <svg class="bi bi-chat-dots-fill" fill="currentColor" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
-              <path fill-rule="evenodd" d="M16 8c0 3.866-3.582 7-8 7a9.06 9.06 0 0 1-2.347-.306c-.584.296-1.925.864-4.181 1.234-.2.032-.352-.176-.273-.362.354-.836.674-1.95.77-2.966C.744 11.37 0 9.76 0 8c0-3.866 3.582-7 8-7s8 3.134 8 7zM5 8a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
-            </svg>
-          </button>
-        </div>
-      </div>
-
-      <!-- 혼주 연락처 모달 -->
-      <button class="contact-btn fade-in-on-scroll" id="contactBtn">혼주 연락처 보기</button>
-      <div class="contact-modal" id="contactModal">
-        <div class="contact-modal-content">
-          <!-- 신랑 -->
-          <div class="phone-module-contact-line">
-            <div class="phone-contact-info">
-              <div class="phone-title">신랑父</div>
-              <div class="phone-name">임종용</div>
-            </div>
-            <div class="phone-contact-buttons">
-              <button onclick="location.href='tel:010-1111-1111'">
-                <svg class="bi bi-telephone-fill" fill="currentColor" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd" d="M2.267.98a1.636 1.636 0 0 1 2.448.152l1.681 2.162c.309.396.418.913.296 1.4l-.513 2.053a.636.636 0 0 0 .167.604L8.65 9.654a.636.636 0 0 0 .604.167l2.052-.513a1.636 1.636 0 0 1 1.401.296l2.162 1.681c.777.604.849 1.753.153 2.448l-.97.97c-.693.693-1.73.998-2.697.658a17.47 17.47 0 0 1-6.571-4.144A17.47 17.47 0 0 1 .639 4.646c-.34-.967-.035-2.004.658-2.698l.97-.969z"/>
-                </svg>
-              </button>
-              <button onclick="location.href='sms:010-1111-1111'">
-                <svg class="bi bi-chat-dots-fill" fill="currentColor" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd" d="M16 8c0 3.866-3.582 7-8 7a9.06 9.06 0 0 1-2.347-.306c-.584.296-1.925.864-4.181 1.234-.2.032-.352-.176-.273-.362.354-.836.674-1.95.77-2.966C.744 11.37 0 9.76 0 8c0-3.866 3.582-7 8-7s8 3.134 8 7zM5 8a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
-                </svg>
-              </button>
-            </div>
-          </div>
-          <div class="phone-module-contact-line">
-            <div class="phone-contact-info">
-              <div class="phone-title">신랑母</div>
-              <div class="phone-name">최희승</div>
-            </div>
-            <div class="phone-contact-buttons">
-              <button onclick="location.href='tel:010-1111-1111'">
-                <svg class="bi bi-telephone-fill" fill="currentColor" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd" d="M2.267.98a1.636 1.636 0 0 1 2.448.152l1.681 2.162c.309.396.418.913.296 1.4l-.513 2.053a.636.636 0 0 0 .167.604L8.65 9.654a.636.636 0 0 0 .604.167l2.052-.513a1.636 1.636 0 0 1 1.401.296l2.162 1.681c.777.604.849 1.753.153 2.448l-.97.97c-.693.693-1.73.998-2.697.658a17.47 17.47 0 0 1-6.571-4.144A17.47 17.47 0 0 1 .639 4.646c-.34-.967-.035-2.004.658-2.698l.97-.969z"/>
-                </svg>
-              </button>
-              <button onclick="location.href='sms:010-1111-1111'">
-                <svg class="bi bi-chat-dots-fill" fill="currentColor" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd" d="M16 8c0 3.866-3.582 7-8 7a9.06 9.06 0 0 1-2.347-.306c-.584.296-1.925.864-4.181 1.234-.2.032-.352-.176-.273-.362.354-.836.674-1.95.77-2.966C.744 11.37 0 9.76 0 8c0-3.866 3.582-7 8-7s8 3.134 8 7zM5 8a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
-                </svg>
-              </button>
-            </div>
-          </div>
-          <!-- 신부 -->
-          <div class="phone-module-contact-line">
-            <div class="phone-contact-info">
-              <div class="phone-title">신부父</div>
-              <div class="phone-name">이호준</div>
-            </div>
-            <div class="phone-contact-buttons">
-              <button onclick="location.href='tel:010-1111-1111'">
-                <svg class="bi bi-telephone-fill" fill="currentColor" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd" d="M2.267.98a1.636 1.636 0 0 1 2.448.152l1.681 2.162c.309.396.418.913.296 1.4l-.513 2.053a.636.636 0 0 0 .167.604L8.65 9.654a.636.636 0 0 0 .604.167l2.052-.513a1.636 1.636 0 0 1 1.401.296l2.162 1.681c.777.604.849 1.753.153 2.448l-.97.97c-.693.693-1.73.998-2.697.658a17.47 17.47 0 0 1-6.571-4.144A17.47 17.47 0 0 1 .639 4.646c-.34-.967-.035-2.004.658-2.698l.97-.969z"/>
-                </svg>
-              </button>
-              <button onclick="location.href='sms:010-1111-1111'">
-                <svg class="bi bi-chat-dots-fill" fill="currentColor" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd" d="M16 8c0 3.866-3.582 7-8 7a9.06 9.06 0 0 1-2.347-.306c-.584.296-1.925.864-4.181 1.234-.2.032-.352-.176-.273-.362.354-.836.674-1.95.77-2.966C.744 11.37 0 9.76 0 8c0-3.866 3.582-7 8-7s8 3.134 8 7zM5 8a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
-                </svg>
-              </button>
-            </div>
-          </div>
-          <div class="phone-module-contact-line">
-            <div class="phone-contact-info">
-              <div class="phone-title">신부母</div>
-              <div class="phone-name">최경숙</div>
-            </div>
-            <div class="phone-contact-buttons">
-              <button onclick="location.href='tel:010-1111-1111'">
-                <svg class="bi bi-telephone-fill" fill="currentColor" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd" d="M2.267.98a1.636 1.636 0 0 1 2.448.152l1.681 2.162c.309.396.418.913.296 1.4l-.513 2.053a.636.636 0 0 0 .167.604L8.65 9.654a.636.636 0 0 0 .604.167l2.052-.513a1.636 1.636 0 0 1 1.401.296l2.162 1.681c.777.604.849 1.753.153 2.448l-.97.97c-.693.693-1.73.998-2.697.658a17.47 17.47 0 0 1-6.571-4.144A17.47 17.47 0 0 1 .639 4.646c-.34-.967-.035-2.004.658-2.698l.97-.969z"/>
-                </svg>
-              </button>
-              <button onclick="location.href='sms:010-1111-1111'">
-                <svg class="bi bi-chat-dots-fill" fill="currentColor" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg">
-                  <path fill-rule="evenodd" d="M16 8c0 3.866-3.582 7-8 7a9.06 9.06 0 0 1-2.347-.306c-.584.296-1.925.864-4.181 1.234-.2.032-.352-.176-.273-.362.354-.836.674-1.95.77-2.966C.744 11.37 0 9.76 0 8c0-3.866 3.582-7 8-7s8 3.134 8 7zM5 8a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm4 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/>
-                </svg>
-              </button>
-            </div>
-          </div>
-
-          <button class="contact-close-btn" onclick="closeContactModal('contactModal')">닫기</button>
-        </div>
-      </div>
-    </div>
-
     <div class="mid-image-container fade-in-on-scroll">
-      <img src="img/10.jpg" alt="설명 텍스트">
+      <img src="img/20.jpg" alt="설명 텍스트">
     </div>
 
 
@@ -468,6 +472,7 @@
   <script src="https://t1.kakaocdn.net/kakao_js_sdk/2.7.5/kakao.min.js" integrity="sha384-dok87au0gKqJdxs7msEdBPNnKSRT+/mhTVzq+qOhcL464zXwvcrpjeWvyj1kCdq6" crossorigin="anonymous"></script>
 
 
+  <script src="js/music.js"></script>
   <script src="js/calendar.js"></script>
   <script src="js/gallery.js"></script>
   <script src="js/contact.js"></script>

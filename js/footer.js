@@ -8,9 +8,9 @@ Kakao.Share.createDefaultButton({
   objectType: 'feed',
   content: {
     title: '연수 ♥ 단비 결혼합니다.',
-    description: '11월 30일 오후 3시 40분',
+    description: '더 링크 호텔 | 11월 30일 오후 3시 40분',
     imageUrl:
-      'https://danyeon1130.github.io/img/head.png',
+      'https://danyeon1130.github.io/img/og_img.png',
     link: {
       // [내 애플리케이션] > [플랫폼] 에서 등록한 사이트 도메인과 일치해야 함
       mobileWebUrl: 'https://danyeon1130.github.io/',
