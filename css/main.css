@@ -107,18 +107,14 @@ hr {
 }
 
 .top-image-container {
-  width: 100%;
-  overflow: hidden; /* 좌우 넘치는 부분 잘리게 */
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  text-align: center;
+  margin: clamp(0rem, 0vw, 0rem);
 }
 
 .top-image-container img {
-  height: 100%;       /* 높이는 유지 */
-  width: auto;        /* 가로는 자동으로 늘어나게 */
-  display: block;
-  margin: 0 auto;     /* 중앙 정렬 */
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.0rem;
 }
 
 .mid-image-container {
