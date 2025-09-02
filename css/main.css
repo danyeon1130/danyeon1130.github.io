@@ -27,6 +27,39 @@ body {
   overflow-x: hidden;
 }
 
+/* Toast (bottom popup) */
+.toast-container {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  pointer-events: none;
+  z-index: 10000;
+}
+
+.toast-message {
+  background: rgba(34, 34, 34, 0.92);
+  color: #fff;
+  padding: 0.7rem 1rem;
+  margin: 0.5rem;
+  border-radius: 0.75rem;
+  font-size: clamp(0.9rem, 3vw, 1rem);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+  transform: translateY(120%);
+  opacity: 0;
+  pointer-events: auto;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+.toast-message.show {
+  transform: translateY(0);
+  opacity: 1;
+}
+
 .container {
   width: 100%;
   max-width: 600px;

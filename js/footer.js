@@ -32,10 +32,18 @@ Kakao.Share.createDefaultButton({
 document.getElementById('link-copy-btn').addEventListener('click', function() {
   navigator.clipboard.writeText(window.location.href)
     .then(() => {
-      alert('링크가 복사되었습니다!');
+      if (typeof showToast === 'function') {
+        showToast('링크가 복사되었습니다!');
+      } else {
+        try { alert('링크가 복사되었습니다!'); } catch (e) {}
+      }
     })
     .catch(err => {
       console.error('링크 복사 실패:', err);
-      alert('복사에 실패했습니다.');
+      if (typeof showToast === 'function') {
+        showToast('복사에 실패했습니다.');
+      } else {
+        try { alert('복사에 실패했습니다.'); } catch (e) {}
+      }
     });
 });

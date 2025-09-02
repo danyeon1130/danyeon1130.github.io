@@ -19,12 +19,46 @@ document.querySelectorAll('.contact-modal').forEach(modal => {
 
 function copyToClipboard(text) {
   navigator.clipboard.writeText(text).then(function() {
-    alert("계좌번호가 복사되었습니다: " + text);
+    showToast("복사되었습니다");
   }, function(err) {
-    alert("복사 실패: " + err);
+    showToast("복사 실패: " + err);
   });
 }
 
 function closeContactModal(id) {
   document.getElementById(id).style.display = "none";
+}
+
+// Toast helper
+function ensureToastContainer() {
+  var existing = document.getElementById('toastContainer');
+  if (existing) return existing;
+  var container = document.createElement('div');
+  container.id = 'toastContainer';
+  container.className = 'toast-container';
+  document.body.appendChild(container);
+  return container;
+}
+
+function showToast(message, options) {
+  var opts = options || {};
+  var durationMs = typeof opts.duration === 'number' ? opts.duration : 1800;
+  var container = ensureToastContainer();
+
+  var toast = document.createElement('div');
+  toast.className = 'toast-message';
+  toast.textContent = message;
+  container.appendChild(toast);
+
+  // trigger animation
+  requestAnimationFrame(function() {
+    toast.classList.add('show');
+  });
+
+  setTimeout(function() {
+    toast.classList.remove('show');
+    setTimeout(function() {
+      if (toast.parentNode) toast.parentNode.removeChild(toast);
+    }, 400);
+  }, durationMs);
 }
