@@ -105,18 +105,35 @@ body {
   position: fixed;
   top: clamp(0.8em, 1.2vw, 1rem);
   right: calc(50vw - min(300px, 50vw) + clamp(0.8rem, 1.2vw, 1rem));
-  padding: clamp(0.35rem, 0.35vw, 0.35rem);
-  background-color: #333;
+  padding: clamp(0.3rem, 0.3vw, 0.3rem);
   color: #fff;
   border: none;
   border-radius: 2rem;
+  background-color: rgb(253, 253, 254);
+  border-radius: 50%;
   cursor: pointer;
   font-size: clamp(0.7rem, 0.9vw, 0.9rem);
   z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0.2rem 0.2rem rgba(0, 0, 0, 0.4);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#music-toggle:hover {
+  background-color: rgb(253, 253, 254);
+  transform: scale(1.1);
 }
 
 #music-toggle.on {
-  background-color: #002803; /* 켜졌을 때 초록색 */
+  background-color: rgb(253, 253, 254); /* 켜졌을 때 연한 초록색 */
+}
+
+#music-toggle img {
+  display: block;
+  width: clamp(1.1rem, 2vw, 1.5rem);
+  height: clamp(1.1rem, 2vw, 1.5rem);
 }
 
 .text-container {

@@ -44,12 +44,12 @@ async function setPlaying(next) {
     try {
       await audio.play();
       isPlaying = true;
-      button.textContent = "🔊";
+      button.innerHTML = '<img src="icon/music_on.gif" alt="음악 켜짐">';
       button.classList.add("on");
       button.setAttribute("aria-pressed", "true");
     } catch (err) {
       isPlaying = false;
-      button.textContent = "🔇";
+      button.innerHTML = '<img src="icon/music_off.png" alt="음악 꺼짐">';
       button.classList.remove("on");
       button.setAttribute("aria-pressed", "false");
       // Inform user when autoplay/play fails
@@ -59,7 +59,7 @@ async function setPlaying(next) {
   } else {
     audio.pause();
     isPlaying = false;
-    button.textContent = "🔇";
+    button.innerHTML = '<img src="icon/music_off.png" alt="음악 꺼짐">';
     button.classList.remove("on");
     button.setAttribute("aria-pressed", "false");
   }
@@ -76,6 +76,8 @@ button.addEventListener('click', () => {
 
 // 5-second delayed autoplay notice
 window.addEventListener('DOMContentLoaded', () => {
+  // 초기 상태: 음악 꺼짐 아이콘 표시
+  button.innerHTML = '<img src="icon/music_off.png" alt="음악 꺼짐">';
   showToast("배경음악이 5초 뒤에 재생됩니다. (우상단에서 끌 수 있어요)", { duration: 2400 });
 
   autoplayTimer = setTimeout(() => {

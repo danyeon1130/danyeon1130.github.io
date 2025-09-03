@@ -5,7 +5,7 @@
     }
 
     .gallery-swiper .swiper-slide img {
-        height: 80px;
+        height: clamp(60px, 15vw, 100px);
     }
 
     .gallery-swiper .swiper-slide {

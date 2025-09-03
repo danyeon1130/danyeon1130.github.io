@@ -8,7 +8,7 @@ Kakao.Share.createDefaultButton({
   objectType: 'feed',
   content: {
     title: '연수 ♥ 단비 결혼합니다.',
-    description: '더 링크 호텔 | 11월 30일 오후 3시 40분',
+    description: '더 링크 호텔 | 25년 11월 30일 오후 3시 40분',
     imageUrl:
       'https://danyeon1130.github.io/img/og_img.jpg',
     link: {
