@@ -1,13 +1,13 @@
 // 모달용 이미지
 const imagePaths = [];
-for (let i = 1; i <= 40; i++) {
+for (let i = 1; i <= 9; i++) {
   //const num = i.toString().padStart(3, "0");
   imagePaths.push(`img/resize_img/${i}.jpg`);
 }
 
 // 슬라이더용 이미지지
 const imagePaths2 = [];
-for (let i = 1; i <= 40; i++) {
+for (let i = 1; i <= 9; i++) {
   //const num = i.toString().padStart(3, "0");
   imagePaths2.push(`img/crop_img/${i}.jpg`);
 }
