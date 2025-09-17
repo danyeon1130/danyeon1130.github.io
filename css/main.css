@@ -21,7 +21,7 @@
 body {
   font-family: 'SchoolSafeDictation', serif;
   background: black;
-  color: #222222;
+  color: #111111;
   margin: 0;
   padding: 0;
   overflow-x: hidden;
@@ -83,7 +83,6 @@ body {
   transform: translateY(-8px);
   transition: opacity .25s ease, transform .25s ease;
   pointer-events: auto; /* so links/buttons inside could work if you add them later */
-  font-size: 14px;
   line-height: 1.35;
 }
 .music-toast-message.show {
@@ -151,7 +150,7 @@ body {
   text-align: center;
   font-size: clamp(1rem, 2.5vw, 1.2rem);
   margin-bottom: 0.4em;
-  color: #222222;
+  color: #111111;
 }
 
 .venue {
@@ -172,13 +171,13 @@ hr {
   line-height: 1.8;
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
-  color: #222222;
+  color: #111111;
 }
 
 .parents {
   text-align: center;
   font-size: clamp(1rem, 2.5vw, 1.2rem);
-  color: #222222;
+  color: #111111;
   padding-bottom: 1.5rem;
 }
 
