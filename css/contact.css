@@ -90,6 +90,7 @@
   margin: 0.5rem 0;
   font-size: clamp(0.8rem, 3vw, 1rem);
   flex-wrap: wrap;
+  margin-bottom: 1.7rem;
 }
 
 .contact-account-text {
@@ -135,6 +136,7 @@
   font-size: clamp(0.8rem, 3vw, 0.9rem);
   margin-left: auto; /* ✅ 오른쪽 정렬 */
   color: black;
+  font-family: 'SchoolSafeDictation', sans-serif;
 }
 
 .contact-copy-btn:hover {
