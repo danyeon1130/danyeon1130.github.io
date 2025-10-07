@@ -1,16 +1,4 @@
 @font-face {
-  font-family: 'Eulyoo1945';
-  src: url('../font/Eulyoo1945-Regular.woff2') format('woff2');
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Eulyoo1945';
-  src: url('../font/Eulyoo1945-SemiBold.woff2') format('woff2');
-  font-weight: 600;
-  font-style: normal;
-}
-@font-face {
     font-family: 'SchoolSafeDictation';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2408-5@1.0/HakgyoansimBadasseugiTTF-L.woff2') format('woff2');
     font-weight: normal;
