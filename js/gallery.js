@@ -26,8 +26,6 @@ for (let i = 0; i < imagePaths2.length; i += pageSize) {
     const realIndex = i + index;
     img.src = src;
     img.alt = `Image ${realIndex + 1}`;
-    img.decoding = "async";
-    img.loading = "lazy";
     img.addEventListener("click", () => openModal(realIndex));
     slide.appendChild(img);
   });
@@ -42,10 +40,15 @@ imagePaths.forEach((src, i) => {
   const img = document.createElement("img");
   img.src = src;
   img.alt = `Image ${i + 1}`;
-  img.decoding = "async";
-  img.loading = "lazy";
-  img.className = "modal-image"
+  img.loading = "lazy"
+  img.className = "modal-image swiper-lazy";
   slide.appendChild(img);
+
+  // Swiper의 로딩 인디케이터 추가
+  const preloader = document.createElement("div");
+  preloader.className = "swiper-lazy-preloader";
+  slide.appendChild(preloader);
+
   modalWrapper.appendChild(slide);
 });
 
@@ -88,11 +91,9 @@ function openModal(index) {
   if (!modalSwiper) {
     modalSwiper = new Swiper('.modal-swiper', {
       loop: true,
-      preloadImages: false,         // swiper가 이미지 선로딩하지 않도록
       lazy: {
-        loadOnTransitionStart: false,
-        loadPrevNext: 2,            // 양옆 1장만 미리
-        loadPrevNextAmount: 2
+        loadPrevNext: true,
+        loadPrevNextAmount: 2,
       },
       watchSlidesProgress: true,
       observer: false,
