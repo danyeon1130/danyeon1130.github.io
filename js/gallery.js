@@ -68,12 +68,26 @@ function setModalHeight() {
   modal.style.setProperty('--vh', `${vh}px`);
 }
 
+let scrollTop = 0;
+function lockBody() {
+  scrollTop = window.scrollY || document.documentElement.scrollTop;
+  document.body.style.position = 'fixed';
+  document.body.style.top = `-${scrollTop}px`;
+  document.body.style.left = '0';
+  document.body.style.right = '0';
+  document.body.style.width = '100%';
+}
+function unlockBody() {
+  document.body.style.position = '';
+  document.body.style.top = '';
+  document.body.style.left = '';
+  document.body.style.right = '';
+  document.body.style.width = '';
+  window.scrollTo(0, scrollTop);
+}
+
 function openModal(index) {
-  document.body.style.overflow = 'hidden';
-  
-  // 모바일에서 주소창 숨기기 위한 스크롤 방지
-  document.documentElement.style.overflow = 'hidden';
-  document.documentElement.style.height = '100%';
+  lockBody();
   
   const modal = document.getElementById("imageModal");
   modal.style.display = "block";
@@ -88,12 +102,11 @@ function openModal(index) {
     modalSwiper = new Swiper('.modal-swiper', {
       loop: true,
       lazy: {
+        loadOnTransitionStart: true,
         loadPrevNext: true,
-        loadPrevNextAmount: 2,
+        loadPrevNextAmount: 1,
       },
       watchSlidesProgress: true,
-      observer: false,
-      observeParents: false,
       updateOnWindowResize: false,
       navigation: {
         nextEl: '.swiper-button-next',
@@ -118,9 +131,7 @@ function openModal(index) {
 }
 
 function closeModal() {
-  document.body.style.overflow = ''; // 원래대로
-  document.documentElement.style.overflow = ''; // 원래대로
-  document.documentElement.style.height = ''; // 원래대로
+  unlockBody(); // 원래대로
   
   // 리사이즈 이벤트 리스너 제거
   window.removeEventListener('resize', setModalHeight);
