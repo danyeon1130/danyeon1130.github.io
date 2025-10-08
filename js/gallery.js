@@ -105,7 +105,9 @@ function openModal(index) {
   } else {
     modalSwiper.update(); // 모달 다시 열 때 슬라이더 갱신
   }
-
+  
+  modalSwiper.slideToLoop(index, 0);
+  
   // 슬라이더 초기화 및 슬라이드 이동
   setTimeout(() => {
     if (modalSwiper) {
