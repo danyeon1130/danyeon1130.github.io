@@ -44,11 +44,6 @@ imagePaths.forEach((src, i) => {
   img.className = "modal-image swiper-lazy";
   slide.appendChild(img);
 
-  // Swiper의 로딩 인디케이터 추가
-  const preloader = document.createElement("div");
-  preloader.className = "swiper-lazy-preloader";
-  slide.appendChild(preloader);
-
   modalWrapper.appendChild(slide);
 });
 
