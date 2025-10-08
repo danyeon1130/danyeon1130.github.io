@@ -80,7 +80,8 @@ function openModal(index) {
   
   setModalHeight();
   
-  // 화면 크기 변경시에도 높이 재설정
+  // 화면 크기 변경시에도 높이 재설정 (중복 방지를 위해 먼저 제거)
+  window.removeEventListener('resize', setModalHeight);
   window.addEventListener('resize', setModalHeight);
 
   if (!modalSwiper) {
@@ -105,24 +106,13 @@ function openModal(index) {
     modalSwiper.update(); // 모달 다시 열 때 슬라이더 갱신
   }
 
-  modalSwiper.slideToLoop(index, 0);
-
-  const images = modalWrapper.querySelectorAll('img');
-  let loaded = 0;
-  images.forEach(img => {
-    img.onload = () => {
-      loaded++;
-      if (loaded === images.length) {
-        if (modalSwiper) modalSwiper.update();
-        modalSwiper.slideToLoop(index, 0);
-      }
-    };
-  });
-  // 만약 이미지가 이미 캐시에 있으면 onload가 안 불릴 수 있으니, 강제 update도 추가
+  // 슬라이더 초기화 및 슬라이드 이동
   setTimeout(() => {
-    if (modalSwiper) modalSwiper.update();
-    modalSwiper.slideToLoop(index, 0);
-  }, 500);
+    if (modalSwiper) {
+      modalSwiper.update();
+      modalSwiper.slideToLoop(index, 0);
+    }
+  }, 100);
 }
 
 function closeModal() {
@@ -155,4 +145,4 @@ document.getElementById("imageModal").addEventListener("click", function(event) 
   }
   // 그 외(배경 등)는 모달 닫기
   closeModal();
-}, { passive: true });
+});
